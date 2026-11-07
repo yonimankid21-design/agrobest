@@ -7,140 +7,143 @@
       "image_key": "best_001",
       "name": "MAIZEFORCE F1",
       "category": "Seeds",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_001.png"
     },
     {
       "number": 2,
       "image_key": "best_002",
       "name": "WHEATPRIME",
       "category": "Seeds",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_002.png"
     },
     {
       "number": 3,
       "image_key": "best_003",
       "name": "TEFFGOLD",
       "category": "Seeds",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_003.png"
     },
     {
       "number": 4,
       "image_key": "best_004",
       "name": "BARLEYFIELD",
       "category": "Seeds",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_004.png"
     },
     {
       "number": 5,
       "image_key": "best_005",
       "name": "SORGHUMSTAR",
       "category": "Seeds",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_005.png"
     },
     {
       "number": 6,
       "image_key": "best_006",
       "name": "RICEHARVEST",
       "category": "Seeds",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_006.png"
     },
     {
       "number": 7,
       "image_key": "best_007",
       "name": "TOMATOGLOW F1",
       "category": "Seeds",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_007.png"
     },
     {
       "number": 8,
       "image_key": "best_008",
       "name": "ONIONCREST",
       "category": "Seeds",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_008.png"
     },
     {
       "number": 9,
       "image_key": "best_009",
       "name": "CABBAGEKING F1",
       "category": "Seeds",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_009.png"
     },
     {
       "number": 10,
       "image_key": "best_010",
       "name": "CHICKPEAPRO",
       "category": "Seeds",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_010.png"
     },
     {
       "number": 11,
       "image_key": "best_011",
       "name": "WEEDCLEAR 480",
       "category": "Crop protection",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_011.png"
     },
     {
       "number": 12,
       "image_key": "best_012",
       "name": "PESTSHIELD",
       "category": "Crop protection",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_012.png"
     },
     {
       "number": 13,
       "image_key": "best_013",
       "name": "FUNGISTOP",
       "category": "Crop protection",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_013.png"
     },
     {
       "number": 14,
       "image_key": "best_014",
       "name": "SEEDGUARD",
       "category": "Crop protection",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_014.png"
     },
     {
       "number": 15,
       "image_key": "best_015",
       "name": "MITELOCK",
       "category": "Crop protection",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_015.png"
     },
     {
       "number": 16,
       "image_key": "best_016",
       "name": "LEAFBOOST",
       "category": "Fertilizers",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_016.png"
     },
     {
       "number": 17,
       "image_key": "best_017",
       "name": "ROOTVITAL",
       "category": "Fertilizers",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_017.png"
     },
     {
       "number": 18,
       "image_key": "best_018",
       "name": "NUTRIMAX NPK",
       "category": "Fertilizers",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_018.png"
     },
     {
       "number": 19,
       "image_key": "best_019",
       "name": "UREAPLUS",
       "category": "Fertilizers",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_019.png"
     },
     {
       "number": 20,
       "image_key": "best_020",
       "name": "SPRAYFLOW",
       "category": "Crop care",
-      "image_storage_url": null
+      "image_url": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/best_020.png"
     }
-  ]
+  ],
+  "imageBucket": "agrobest",
+  "supabaseProjectRef": "zmvugghfcythetjdycur",
+  "imagePattern": "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/{image_key}.png"
 }
