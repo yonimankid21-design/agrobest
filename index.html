@@ -38,6 +38,10 @@
     .product-art{aspect-ratio:4/3;height:auto;background:#f7f8f2;background-image:none;background-size:auto;background-position:center;background-repeat:no-repeat;display:grid;place-items:center;position:relative;overflow:hidden;padding:12px}
     .product-art:before,.product-art:after{display:none}
     .product-art img.product-image{display:block;width:100%;height:100%;max-height:240px;object-fit:contain;position:relative;z-index:1}
+    .product-art.image-missing{background:linear-gradient(145deg,#edf3e9,#f8faf6);display:grid;place-items:center}
+    .product-image-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:#718273;text-align:center;font-size:.78rem;font-weight:700;letter-spacing:.04em;padding:12px}
+    .product-image-fallback strong{font:800 1.1rem Manrope,sans-serif;color:#255a3b}
+    .product-image-fallback small{font-size:.68rem;font-weight:600;color:#89978b}
     .product-art .product-tag{z-index:2;background:#fff;font-size:.65rem;box-shadow:0 2px 12px #183a2512}
     .product-copy{padding:18px}
     .product-copy h3{min-height:2.55em}
@@ -159,6 +163,52 @@
     // Add the official WhatsApp number in international format, digits only, when supplied by the business owner.
     const AGROBEST_CONFIG = { whatsappNumber: "" };
     const productDetails = {"MAIZEFORCE F1":{"imageFile":"best_001","category":"Seeds","type":"Seed product","text":"Seed product. Contact AGROBEST for variety, seed specifications, pack size and availability."},"WHEATPRIME":{"imageFile":"best_002","category":"Seeds","type":"Seed product","text":"Seed product. Contact AGROBEST for variety, seed specifications, pack size and availability."},"TEFFGOLD":{"imageFile":"best_003","category":"Seeds","type":"Seed product","text":"Seed product. Contact AGROBEST for variety, seed specifications, pack size and availability."},"BARLEYFIELD":{"imageFile":"best_004","category":"Seeds","type":"Seed product","text":"Seed product. Contact AGROBEST for variety, seed specifications, pack size and availability."},"SORGHUMSTAR":{"imageFile":"best_005","category":"Seeds","type":"Seed product","text":"Seed product. Contact AGROBEST for variety, seed specifications, pack size and availability."},"RICEHARVEST":{"imageFile":"best_006","category":"Seeds","type":"Seed product","text":"Seed product. Contact AGROBEST for variety, seed specifications, pack size and availability."},"TOMATOGLOW F1":{"imageFile":"best_007","category":"Seeds","type":"Seed product","text":"Seed product. Contact AGROBEST for variety, seed specifications, pack size and availability."},"ONIONCREST":{"imageFile":"best_008","category":"Seeds","type":"Seed product","text":"Seed product. Contact AGROBEST for variety, seed specifications, pack size and availability."},"CABBAGEKING F1":{"imageFile":"best_009","category":"Seeds","type":"Seed product","text":"Seed product. Contact AGROBEST for variety, seed specifications, pack size and availability."},"CHICKPEAPRO":{"imageFile":"best_010","category":"Seeds","type":"Seed product","text":"Seed product. Contact AGROBEST for variety, seed specifications, pack size and availability."},"WEEDCLEAR 480":{"imageFile":"best_011","category":"Crop protection","type":"Crop protection product","text":"Agricultural crop-protection product. Refer to the official label for composition, registered use, precautions and directions."},"PESTSHIELD":{"imageFile":"best_012","category":"Crop protection","type":"Crop protection product","text":"Agricultural crop-protection product. Refer to the official label for composition, registered use, precautions and directions."},"FUNGISTOP":{"imageFile":"best_013","category":"Crop protection","type":"Crop protection product","text":"Agricultural crop-protection product. Refer to the official label for composition, registered use, precautions and directions."},"SEEDGUARD":{"imageFile":"best_014","category":"Crop protection","type":"Crop protection product","text":"Agricultural crop-protection product. Refer to the official label for composition, registered use, precautions and directions."},"MITELOCK":{"imageFile":"best_015","category":"Crop protection","type":"Crop protection product","text":"Agricultural crop-protection product. Refer to the official label for composition, registered use, precautions and directions."},"LEAFBOOST":{"imageFile":"best_016","category":"Fertilizers","type":"Plant nutrition product","text":"Plant nutrition product. Contact AGROBEST for formulation, nutrient analysis, pack size and availability."},"ROOTVITAL":{"imageFile":"best_017","category":"Fertilizers","type":"Plant nutrition product","text":"Plant nutrition product. Contact AGROBEST for formulation, nutrient analysis, pack size and availability."},"NUTRIMAX NPK":{"imageFile":"best_018","category":"Fertilizers","type":"Plant nutrition product","text":"Plant nutrition product. Contact AGROBEST for formulation, nutrient analysis, pack size and availability."},"UREAPLUS":{"imageFile":"best_019","category":"Fertilizers","type":"Plant nutrition product","text":"Plant nutrition product. Contact AGROBEST for formulation, nutrient analysis, pack size and availability."},"SPRAYFLOW":{"imageFile":"best_020","category":"Crop care","type":"Crop-care product","text":"Crop-care product. Contact AGROBEST for intended use, label directions and availability."}};
+    // Try common file extensions and case variants because Storage objects may not share one extension.
+    (function loadSupabaseProductImages(){
+      const base = "https://zmvugghfcythetjdycur.supabase.co/storage/v1/object/public/agrobest/";
+      document.querySelectorAll(".product-image").forEach(img => {
+        const wrap = img.closest(".product-art");
+        const key = wrap && wrap.dataset.imageKey;
+        if (!key) return;
+        const suffix = key.split("_")[1] || "";
+        const shortKey = "best_" + String(Number(suffix));
+        const stems = [...new Set([key, shortKey])];
+        const extensions = ["png","jpg","jpeg","webp","avif","PNG","JPG","JPEG","WEBP","AVIF"];
+        const candidates = [];
+        stems.forEach(stem => {
+          extensions.forEach(ext => candidates.push(base + stem + "." + ext));
+          candidates.push(base + stem);
+        });
+        let candidateIndex = 0;
+        const tried = new Set();
+        img.onerror = () => {
+          while (candidateIndex < candidates.length && tried.has(candidates[candidateIndex])) candidateIndex++;
+          if (candidateIndex < candidates.length) {
+            const next = candidates[candidateIndex++];
+            tried.add(next);
+            img.src = next;
+            return;
+          }
+          img.hidden = true;
+          wrap.classList.add("image-missing");
+          if (!wrap.querySelector(".product-image-fallback")) {
+            const fallback = document.createElement("div");
+            fallback.className = "product-image-fallback";
+            fallback.innerHTML = "<strong>AGROBEST</strong><span>Product image unavailable</span><small>" + key + "</small>";
+            wrap.prepend(fallback);
+          }
+        };
+        img.onload = () => {
+          wrap.classList.remove("image-missing");
+          const fallback = wrap.querySelector(".product-image-fallback");
+          if (fallback) fallback.remove();
+        };
+        // Keep the provided PNG path first, then test alternates only if it fails.
+        tried.add(img.src);
+        candidateIndex = 1;
+      });
+    })();
+
     const toast = document.getElementById("toast");
     let toastTimer;
     function notify(message){ toast.textContent=message; toast.classList.add("show"); clearTimeout(toastTimer); toastTimer=setTimeout(()=>toast.classList.remove("show"),3200); }
