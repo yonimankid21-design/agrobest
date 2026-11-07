@@ -1,0 +1,146 @@
+{
+  "organization": "AGROBEST",
+  "mappingConvention": "Product image best_NNN maps to product NNN in this catalog.",
+  "products": [
+    {
+      "number": 1,
+      "image_key": "best_001",
+      "name": "MAIZEFORCE F1",
+      "category": "Seeds",
+      "image_storage_url": null
+    },
+    {
+      "number": 2,
+      "image_key": "best_002",
+      "name": "WHEATPRIME",
+      "category": "Seeds",
+      "image_storage_url": null
+    },
+    {
+      "number": 3,
+      "image_key": "best_003",
+      "name": "TEFFGOLD",
+      "category": "Seeds",
+      "image_storage_url": null
+    },
+    {
+      "number": 4,
+      "image_key": "best_004",
+      "name": "BARLEYFIELD",
+      "category": "Seeds",
+      "image_storage_url": null
+    },
+    {
+      "number": 5,
+      "image_key": "best_005",
+      "name": "SORGHUMSTAR",
+      "category": "Seeds",
+      "image_storage_url": null
+    },
+    {
+      "number": 6,
+      "image_key": "best_006",
+      "name": "RICEHARVEST",
+      "category": "Seeds",
+      "image_storage_url": null
+    },
+    {
+      "number": 7,
+      "image_key": "best_007",
+      "name": "TOMATOGLOW F1",
+      "category": "Seeds",
+      "image_storage_url": null
+    },
+    {
+      "number": 8,
+      "image_key": "best_008",
+      "name": "ONIONCREST",
+      "category": "Seeds",
+      "image_storage_url": null
+    },
+    {
+      "number": 9,
+      "image_key": "best_009",
+      "name": "CABBAGEKING F1",
+      "category": "Seeds",
+      "image_storage_url": null
+    },
+    {
+      "number": 10,
+      "image_key": "best_010",
+      "name": "CHICKPEAPRO",
+      "category": "Seeds",
+      "image_storage_url": null
+    },
+    {
+      "number": 11,
+      "image_key": "best_011",
+      "name": "WEEDCLEAR 480",
+      "category": "Crop protection",
+      "image_storage_url": null
+    },
+    {
+      "number": 12,
+      "image_key": "best_012",
+      "name": "PESTSHIELD",
+      "category": "Crop protection",
+      "image_storage_url": null
+    },
+    {
+      "number": 13,
+      "image_key": "best_013",
+      "name": "FUNGISTOP",
+      "category": "Crop protection",
+      "image_storage_url": null
+    },
+    {
+      "number": 14,
+      "image_key": "best_014",
+      "name": "SEEDGUARD",
+      "category": "Crop protection",
+      "image_storage_url": null
+    },
+    {
+      "number": 15,
+      "image_key": "best_015",
+      "name": "MITELOCK",
+      "category": "Crop protection",
+      "image_storage_url": null
+    },
+    {
+      "number": 16,
+      "image_key": "best_016",
+      "name": "LEAFBOOST",
+      "category": "Fertilizers",
+      "image_storage_url": null
+    },
+    {
+      "number": 17,
+      "image_key": "best_017",
+      "name": "ROOTVITAL",
+      "category": "Fertilizers",
+      "image_storage_url": null
+    },
+    {
+      "number": 18,
+      "image_key": "best_018",
+      "name": "NUTRIMAX NPK",
+      "category": "Fertilizers",
+      "image_storage_url": null
+    },
+    {
+      "number": 19,
+      "image_key": "best_019",
+      "name": "UREAPLUS",
+      "category": "Fertilizers",
+      "image_storage_url": null
+    },
+    {
+      "number": 20,
+      "image_key": "best_020",
+      "name": "SPRAYFLOW",
+      "category": "Crop care",
+      "image_storage_url": null
+    }
+  ]
+}
